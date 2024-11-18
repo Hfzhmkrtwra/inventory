@@ -63,12 +63,12 @@ export async function tambahBarang(item, harga, jumlah) {
 }
 
 export async function hapusBarang(id) {
-  await deleteDoc(doc(basisdata, "Inventory", id))
+  await deleteDoc(doc(basisdata, "inventory", id))
 }
 
 export async function ubahBarang(id, itembaru, hargabaru, jumlahbaru) {
   await updateDoc(
-    doc(basisdata, "buah", id), 
+    doc(basisdata, "inventory", id), 
     { item: itembaru, harga: hargabaru, jumlah: jumlahbaru }
     )
 }
